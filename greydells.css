@@ -1,0 +1,87 @@
+/* Global Styles for Greydells Accounting Services */
+
+/* General style */
+
+body { background-color: #666;  /* Med gray background */
+	  font-family: verdana, "arial narrow", arial, sans-serif;
+	  margin: 0px; padding: 0px;  /* setting margin and padding to zero */ }
+	  
+	  
+/* Heading Styles */
+	
+h1 { font-family: "arial narrow", arial, sans-serif;  /* sits better than verdana  */
+	color: #f9c; padding: 0px; } /* Slightly lighter pink */
+
+h2 { font-family: "arial narrow", arial, sans-serif;
+	color: #ddd; padding: 0px; } /* Light-gray - nicer than white against the med gray bg */
+	
+
+/* Main Body - Text */
+	   
+#main { color: #ddd; /* Light gray lettering */ 
+		text-align: justify; /* reads better */
+		margin: 0px 10%; /* sets the LHS and RHS gaps at 10% of window width */
+		position: relative; top: 140px; }  /* Drops main area beneath the header */
+
+.gas { color: #f9c; } /* Style for any occurance of 'greydells accounting services' */
+	   
+.para { border: 3px inset #f6c; padding: 0px 10px; margin: 10px; }  /* border for paragraphs of text */
+  
+p:first-letter { font-size: 120%; font-family: "lucida handwriting", cursive; color: #f6c; }  /* set first letter to pink cursive letter */
+
+div.staff { border: 3px inset #f6c; padding: 0px 10px; margin: 10px; height: 230px; overflow: auto; }
+
+ul { list-style-image: url("images/bullet.png"); }
+
+/* Main Body - Images */
+
+.pic { padding: 15px 10px 0px 15px;  float: right; }  /* set the picture within the text block  */
+#john { padding: 15px 10px 0px 15px;  float: right; }
+#nikki { padding: 15px 15px 0px 10px; float: left; }
+#matt { padding: 15px 10px 0px 15px; float: right; }
+
+
+/* Bing Map */
+div#bingMap { text-align: center; padding: 20px; }
+
+
+/* Style Rules for Contact Us Form */
+
+.form { text-align: center; width: 560px; padding: 10px; }
+.part { border: 3px inset #f6c; padding: 0px 10px; margin: 10px; width: 580px; }  /* border for form  */
+legend { color: #f6c; text-align: left; }
+td { padding: 2px 5px; }
+fieldset { margin: 10px 0px; background-color: #555; }
+.contDetails { text-align: justify; }
+
+
+/* Header and Footer styles */
+.header { width: 100%; position: fixed; top: 0px; left: 0px; z-index: 100; background-color: #666; } 
+
+#logo { text-align: center; background-color: #202020; width: 100%; color: #ddd; font-size: 56px; }  /* Set the logo image centrally, bg-color as per image, and font-size of alt-text */
+
+.nav { color: #f6c; font-size: 20px; text-align: center; background-color: #666; 
+	   font-family: "arial narrow", arial, sans-serif;
+	   border-top: 2px ridge #f6c; border-bottom: 2px ridge #f6c; padding: 5px 0px; }  /* Set style for the Top Navigation bar */
+
+.footer { background-color: #333; width: 100%; padding: 10px 0px; border-top: 2px ridge #f6c; border-bottom: 2px ridge #f6c;
+			color: #f6c; text-align: center; font-size: 16px; 
+			position: relative; top: 160px; 
+			font-family: "arial narrow", arial, sans-serif; }  /* Set the footer to mirror the header in style - but smaller and not fixed */
+	
+.valid { text-align: center; position: relative; top: 170px; }  /* set position of W3C validation links */
+
+address { color: white; font-style: normal; } /* White copyright text and remove italics */
+
+address a { font-weight: normal; } /* Over-write the bold links below for AWP email link */
+
+div.valid a { background-color: #666; }  /* remove the pink highlight of link for validation links */
+
+
+/* Link styles */	
+a { padding-left: 5px; padding-right: 5px; font-weight: bold; }	 /* Add padding to the links */
+a:link { color: #f6c; text-decoration: none; }  /* remove the underline of links */
+a:visited { color: #c9c; text-decoration: none; }  /* change color of visited links  */
+a:hover { color: black; background-color: #f6c; }	 /* reverse the color-scheme when hovering */
+a:active { color: red; }  /* red font for active link */
+a.current { text-decoration: underline; } /* current page has name underlined */
