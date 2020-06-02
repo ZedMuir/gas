@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> <!-- Fav Icon -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en-gb" />
+		<meta name="description" content="The contact page for Greydells Accounting Services; includes contacts details and a contact form." />
+		<meta name="keywords" content="greydells, accounting, services, accountant, tax services, stevenage, hertfordshire, herts, bookkeeping, finacial, finance, tax return, paye, mortgage, investment, john jenkins, nicola sutton, hitchin, letchworth, graveley" />
+		<meta name="author" content="Steve Muir, Alpine Warrior Pigeon" />
+		<title>Greydells Accounting Services; Contact</title>
+		<link rel="stylesheet" type="text/css" href="greydells3.css" />
+		<!--[if lt IE9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+	<div id="page">
+<!-- Header -->
+		<header>
+			<figure>
+				<img src="images/logo.png" alt="Greydells Accounting Services" />
+				<figcaption></figcaption>
+			</figure>
+			<nav>  <!-- Top Navigation Bar -->
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="services.html">services</a></li>
+					<li><a href="staff.html">staff</a></li>
+					<li><a href="contact.html" class="current">contact</a></li>
+					<li><a href="location.html">location</a></li>
+				</ul>
+			</nav>
+		</header>
+<!-- Main content -->
+		<div id="content">
+			<hgroup>
+				<h1> Contact Us Details </h1>
+				<h2 class="lift"> Call, Email or Pop-in </h2>
+			</hgroup>
+<!-- Contact Details -->
+				<section id="contact">
+					<p id="tel">Phone: <a href="tel:+441438210422">01438 210422</a></p>
+					<p id="e-address">Email: <a href="mailto:john.greydells@gmail.com">john.greydells&#64;gmail.com</a></p>
+					<p id="address">Address: <span class="gas">greydells accounting services, 129b High Street, Stevenage, Herts SG1 3HS</span></p>
+				</section>
+<!-- End Contact Details -->
+				<h2> Or Use The Form Below: </h2>
+<!-- Contact Form -->
+				<div id="form">
+				<form action="sent.php" method="post" name="sent" id="sent" enctype="">
+	<!-- User Information -->
+					<fieldset id="personal">
+						<legend>Personal Information</legend>
+						<p>
+							<label for="name">Name</label>
+							<input id="name" type="text" name="name" placeholder="First and last name" required autofocus>
+						</p>
+						<p>
+							<label for="email">Email</label>
+							<input id="email" type="email" name="email" placeholder="example@domain.com" required>
+						</p>
+						<p>
+							<label for="phone">Phone</label>
+							<input id="phone" type="tel" name="phone" placeholder="e.g. 01438210422" required>
+						</p>
+						<p>
+							<label for="mobile">Mobile</label>
+							<input id="mobile" type="tel" name="mobile" placeholder="e.g. 07920887442">
+						</p>
+					</fieldset>
+	<!-- End User Information -->
+	<!-- Drop Down Select Set -->
+					<fieldset>
+						<legend>Service Required</legend>
+						<p>
+							<label class="no-hover" for="service">Select desired service</label>
+							<select id="service" name="service">
+								<option>Select...</option>
+							<!-- basic group -->
+								<optgroup label="Accounting">
+									<option value="bookkeeping">Bookkeeping</option>
+									<option value="vat">VAT</option>
+									<option value="payroll">Payroll</option>
+									<option value="accounts">Accounts</option>
+									<option value="tax-planning">Tax Planning</option>
+								</optgroup>
+							<!-- tax category -->
+								<optgroup label="Taxation">
+									<option value="personal">Personal</option>
+									<option value="partnership">Partnership</option>
+									<option value="ltd-companies">Limited Companies</option>
+								</optgroup>
+							<!-- other group -->
+								<optgroup label="Other..">
+									<option value="multi">Multiple of above services</option>
+								</optgroup>
+							</select>
+						</p>
+					</fieldset>
+	<!-- End Drop Down Select Set -->
+	<!-- Comment Box -->
+					<fieldset>
+						<legend>Enquiry</legend>
+						<p>
+							<textarea name="enquiry" id="enquiry" placeholder="Enter your query here..."></textarea>
+						</p>
+					</fieldset>
+	<!-- End Comment Box -->
+	<!-- Checkbox Set -->
+					<fieldset>
+						<legend>Contact Methods</legend>
+						<p>
+							<label class="no-hover">How would you like to be contacted?</label>
+							<label><input type="checkbox" name="contact[]" id="method_0" value="tel" checked>Telephone</label>
+							<label><input type="checkbox" name="contact[]" id="method_1" value="mob" checked>Mobile</label>
+							<label><input type="checkbox" name="contact[]" id="method_2" value="email" checked>Email</label>
+						</p>
+					</fieldset>
+	<!-- End Checkbox Set -->
+	<!-- Submit and Clear buttons -->
+					<fieldset>
+						<legend>Submit via Email</legend>
+						<p id="submit">
+							<button type="submit">Submit</button>
+							<button type="reset">Clear</button>
+						</p>
+					</fieldset>
+	<!-- End Submit/Clear buttons -->
+				</form>
+				</div>
+<!-- End Form -->
+		</div>
+<!-- Footer -->
+		<footer>  <!-- Bottom Navigation Bar -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><img src="images/bullet.png" alt="::" /></li>
+				<li><a href="services.html">Services</a></li>
+				<li><img src="images/bullet.png" alt="::" /></li>
+				<li><a href="staff.html">Staff</a></li>
+				<li><img src="images/bullet.png" alt="::" /></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><img src="images/bullet.png" alt="::" /></li>
+				<li><a href="location.html">Location</a></li>
+			</ul>
+			<address> Copyright &copy; <a href="mailto:alpinewarriorpigeon@gmail.com?subject=Web%20Design">Alpine Warrior Pigeon</a></address>
+		</footer>
+	</div>
+	</body>
+</html>
