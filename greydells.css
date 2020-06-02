@@ -1,87 +1,479 @@
-/* Global Styles for Greydells Accounting Services */
-
-/* General style */
-
-body { background-color: #666;  /* Med gray background */
-	  font-family: verdana, "arial narrow", arial, sans-serif;
-	  margin: 0px; padding: 0px;  /* setting margin and padding to zero */ }
-	  
-	  
-/* Heading Styles */
-	
-h1 { font-family: "arial narrow", arial, sans-serif;  /* sits better than verdana  */
-	color: #f9c; padding: 0px; } /* Slightly lighter pink */
-
-h2 { font-family: "arial narrow", arial, sans-serif;
-	color: #ddd; padding: 0px; } /* Light-gray - nicer than white against the med gray bg */
-	
-
-/* Main Body - Text */
-	   
-#main { color: #ddd; /* Light gray lettering */ 
-		text-align: justify; /* reads better */
-		margin: 0px 10%; /* sets the LHS and RHS gaps at 10% of window width */
-		position: relative; top: 140px; }  /* Drops main area beneath the header */
-
-.gas { color: #f9c; } /* Style for any occurance of 'greydells accounting services' */
-	   
-.para { border: 3px inset #f6c; padding: 0px 10px; margin: 10px; }  /* border for paragraphs of text */
-  
-p:first-letter { font-size: 120%; font-family: "lucida handwriting", cursive; color: #f6c; }  /* set first letter to pink cursive letter */
-
-div.staff { border: 3px inset #f6c; padding: 0px 10px; margin: 10px; height: 230px; overflow: auto; }
-
-ul { list-style-image: url("images/bullet.png"); }
-
-/* Main Body - Images */
-
-.pic { padding: 15px 10px 0px 15px;  float: right; }  /* set the picture within the text block  */
-#john { padding: 15px 10px 0px 15px;  float: right; }
-#nikki { padding: 15px 15px 0px 10px; float: left; }
-#matt { padding: 15px 10px 0px 15px; float: right; }
-
-
-/* Bing Map */
-div#bingMap { text-align: center; padding: 20px; }
-
-
-/* Style Rules for Contact Us Form */
-
-.form { text-align: center; width: 560px; padding: 10px; }
-.part { border: 3px inset #f6c; padding: 0px 10px; margin: 10px; width: 580px; }  /* border for form  */
-legend { color: #f6c; text-align: left; }
-td { padding: 2px 5px; }
-fieldset { margin: 10px 0px; background-color: #555; }
-.contDetails { text-align: justify; }
-
-
-/* Header and Footer styles */
-.header { width: 100%; position: fixed; top: 0px; left: 0px; z-index: 100; background-color: #666; } 
-
-#logo { text-align: center; background-color: #202020; width: 100%; color: #ddd; font-size: 56px; }  /* Set the logo image centrally, bg-color as per image, and font-size of alt-text */
-
-.nav { color: #f6c; font-size: 20px; text-align: center; background-color: #666; 
-	   font-family: "arial narrow", arial, sans-serif;
-	   border-top: 2px ridge #f6c; border-bottom: 2px ridge #f6c; padding: 5px 0px; }  /* Set style for the Top Navigation bar */
-
-.footer { background-color: #333; width: 100%; padding: 10px 0px; border-top: 2px ridge #f6c; border-bottom: 2px ridge #f6c;
-			color: #f6c; text-align: center; font-size: 16px; 
-			position: relative; top: 160px; 
-			font-family: "arial narrow", arial, sans-serif; }  /* Set the footer to mirror the header in style - but smaller and not fixed */
-	
-.valid { text-align: center; position: relative; top: 170px; }  /* set position of W3C validation links */
-
-address { color: white; font-style: normal; } /* White copyright text and remove italics */
-
-address a { font-weight: normal; } /* Over-write the bold links below for AWP email link */
-
-div.valid a { background-color: #666; }  /* remove the pink highlight of link for validation links */
-
-
-/* Link styles */	
-a { padding-left: 5px; padding-right: 5px; font-weight: bold; }	 /* Add padding to the links */
-a:link { color: #f6c; text-decoration: none; }  /* remove the underline of links */
-a:visited { color: #c9c; text-decoration: none; }  /* change color of visited links  */
-a:hover { color: black; background-color: #f6c; }	 /* reverse the color-scheme when hovering */
-a:active { color: red; }  /* red font for active link */
-a.current { text-decoration: underline; } /* current page has name underlined */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	vertical-align : baseline;
+
+	margin         : 0;
+	padding        : 0;
+
+	font           : inherit;
+	border         : 0;
+}
+
+
+
+body {
+	overflow-y  : scroll;
+
+	background  : #666 url(images/bg3.png);
+	font-family : Verdana, "Arial Narrow", Arial, sans-serif;
+	font-size   : 62.5%;
+	color       : #ffe8ea;
+}
+
+
+
+header {
+	position   : fixed;
+	top        : 0;
+	left       : 0;
+	z-index    : 100;
+
+	width      : 100%;
+
+	background : #666;
+	text-align : center;
+}
+
+
+
+header figure {
+	background-color : #202020;
+	font-size        : 4rem;
+	color            : #fff;
+}
+
+
+
+nav {
+	min-width    : 770px;
+	padding      : 10px;
+
+	background   : url(images/bg-nav.png);
+	font-size    : 1.6rem;
+	border       : 2px solid #f593bb;
+	border-right : none;
+	border-left  : none;
+}
+
+
+
+nav ul li {
+	display : inline;
+}
+
+
+
+#content {
+	min-width  : 740px;
+	max-width  : 960px;
+	margin     : 0 auto;
+	padding    : 25px;
+
+	background : #666 url(images/bg-content.png);
+}
+
+
+
+hgroup {
+	margin-top : 170px;
+}
+
+
+
+h1,.gas,figcaption {
+	color : #f593bb;
+}
+
+
+
+h1 {
+	margin-bottom : 25px;
+	font-size     : 2rem;
+}
+
+
+
+h2 {
+	margin-bottom : 30px;
+	font-size     : 1.6rem;
+}
+
+
+
+h2.lift {
+	margin-bottom : 10px;
+}
+
+
+
+h2.drop {
+	margin-top    : 15px;
+	margin-bottom : 10px;
+}
+
+
+
+article figure {
+	float  : right;
+	margin : 5px 0 15px 15px;
+}
+
+
+
+article p {
+	margin-bottom : 25px;
+	line-height   : 1.3rem;
+}
+
+
+
+article ul {
+	margin-bottom    : 25px;
+	margin-left      : 25px;
+
+	font-size        : 1rem;
+	line-height      : 1.8rem;
+	list-style-image : url(images/bullet.png);
+}
+
+
+
+article.alt-border section {
+	padding-bottom : 15px;
+	border         : none;
+	border-bottom  : 1px solid #333;
+}
+
+
+
+section figure {
+	float  : right;
+	margin : 4px 0 15px 15px;
+}
+
+
+
+section.even figure {
+	float  : left;
+	margin : 4px 15px 15px 0;
+}
+
+
+
+section {
+	clear      : both;
+	border-top : 1px solid #333;
+}
+
+
+
+section.drop {
+	padding-top : 15px;
+}
+
+
+
+section:first-child {
+	padding : none;
+	border  : none;
+}
+
+
+
+section:last-child {
+	margin-bottom : 7.2rem;
+}
+
+
+
+section figcaption {
+	font-size  : .8rem;
+	text-align : center;
+}
+
+
+
+section#contact {
+	margin-bottom  : 10px;
+	padding-top    : 0;
+	padding-bottom : 20px;
+
+	border-bottom  : 1px solid #333;
+}
+
+
+
+p#tel:before {
+	content      : url(images/phone.png);
+
+	position     : relative;
+	top          : 1rem;
+
+	margin-right : .7rem;
+}
+
+
+
+p#e-address:before {
+	content     : url(images/email.png);
+
+	position    : relative;
+	top         : .8rem;
+
+	margin-left : 50px;
+}
+
+
+
+p#address:before {
+	content      : url(images/address.png);
+
+	position     : relative;
+	top          : 1.1rem;
+
+	margin-right : .2rem;
+}
+
+
+
+section#contact p {
+	display     : inline-block;
+
+	margin      : 0;
+	padding     : 0;
+
+	line-height : 1rem;
+}
+
+
+
+iframe {
+	height : 500px;
+	width  : 740px;
+	margin : 1rem auto;
+}
+
+
+
+section#bingMap {
+	margin-bottom : 0;
+	text-align    : center;
+	border-bottom : none;
+}
+
+
+
+form {
+	width                 : 734px;
+	margin                : 0 auto;
+	padding               : 10px;
+
+	background            : rgba(255,255,255,.1);
+	border-color          : rgba(255,255,255,.6);
+	border-style          : solid;
+	border-width          : 2px;
+	border-radius         : 15px;
+
+	-moz-border-radius    : 15px;
+	-webkit-border-radius : 15px;
+}
+
+
+
+fieldset {
+	width         : 733px;
+	margin-bottom : 15px;
+}
+
+
+
+legend {
+	padding-bottom : 10px;
+
+	font-size      : 1.5rem;
+	color          : #ffeaea;
+	text-shadow    : 0 1px 1px #000;
+}
+
+
+
+form p {
+	margin-bottom         : 5px;
+	padding               : 5px 10px;
+
+	background            : rgba(255,255,255,.3);
+	line-height           : 2rem;
+	border-color          : rgba(255,255,255,.6);
+	border-style          : solid;
+	border-width          : 2px;
+	border-radius         : 10px;
+
+	-moz-border-radius    : 10px;
+	-webkit-border-radius : 10px;
+}
+
+
+
+textarea {
+	height : 4rem;
+	width  : 99%;
+}
+
+
+
+#personal p {
+	float        : left;
+	width        : 157px;
+	margin-right : 3px;
+}
+
+
+
+#personal p:last-of-type {
+	margin-right : 0;
+}
+
+
+
+input[type=checkbox] {
+	margin-left : 35px;
+}
+
+
+
+label:hover {
+	cursor : pointer;
+}
+
+
+
+label.no-hover:hover {
+	cursor : auto;
+}
+
+
+
+button {
+	width                 : 8rem;
+	margin                : 0 2rem;
+	padding               : .5rem 1.4rem;
+
+	background            : #f593bb;
+	font-size             : 1.4rem;
+	color                 : #202020;
+	letter-spacing        : .1rem;
+	text-shadow           : 0 1px 1px #ff4193;
+	border                : 2px solid #ff4193;
+	border-radius         : 20px;
+
+	-moz-border-radius    : 20px;
+	-webkit-border-radius : 20px;
+	-khtml-border-radius  : 20px;
+}
+
+
+
+button:hover {
+	cursor      : pointer;
+	background  : #ff4193;
+	text-shadow : 0 1px 1px #f593bb;
+	border      : 2px solid #f593bb;
+}
+
+
+
+p#submit {
+	text-align : center;
+}
+
+
+
+footer {
+	clear        : both;
+
+	width        : 100%;
+	padding      : 10px 0;
+
+	background   : #202020 url(images/bg-footer.png);
+	font-size    : 1rem;
+	text-align   : center;
+	border       : 2px solid #f593bb;
+	border-right : none;
+	border-left  : none;
+}
+
+
+
+footer ul {
+	margin-bottom : 15px;
+}
+
+
+
+address a {
+	color : #ffe8ea;
+}
+
+
+
+footer ul li {
+	display : inline;
+	padding : 0 10px;
+}
+
+
+
+a {
+	padding         : 10px 30px;
+	color           : #f593bb;
+	text-decoration : none;
+}
+
+
+
+article p a {
+	padding     : 0;
+	font-weight : 700;
+}
+
+
+
+a:visited {
+	color : #c9c;
+}
+
+
+
+a:hover {
+	background-color : #f593bb;
+	color            : #555;
+}
+
+
+
+a:active {
+	color : #000;
+}
+
+
+
+a.current {
+	text-decoration : underline;
+}
+
+
+
+section#contact a {
+	font-weight : 400;
+}
+
+
+
+p,div#LME_maplinks a {
+	font-size : 1rem;
+}
+
+
+
+article p:last-child,fieldset:last-of-type {
+	margin-bottom : 0;
+}
