@@ -1,479 +1,332 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-	vertical-align : baseline;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-	margin         : 0;
-	padding        : 0;
-
-	font           : inherit;
-	border         : 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline; /* CSS reset applied to ensure more browser uniformity - Eric Meyer */
 }
-
-
-
 body {
-	overflow-y  : scroll;
-
-	background  : #666 url(images/bg3.png);
-	font-family : Verdana, "Arial Narrow", Arial, sans-serif;
-	font-size   : 62.5%;
-	color       : #ffe8ea;
+	font-size: 62.5%; /* gives a base of 10px according to a default browser setting of 16px */
+	background:#666 url(images/bg3.png);
+	font-family:Verdana, "Arial Narrow", Arial, sans-serif;
+	color:#ffe8ea;
+	overflow-y:scroll;
 }
-
-
-
+/*--   Header  --*/
 header {
-	position   : fixed;
-	top        : 0;
-	left       : 0;
-	z-index    : 100;
-
-	width      : 100%;
-
-	background : #666;
-	text-align : center;
+	/*-- position:fixed; /* keep the header stationary on page */
+	top:0;
+	left:0;
+	width:100%; /* span complete with of display */
+	text-align:center;
+	background:#666;
+	/* z-index:100; /* Keep the header above the rest of the page when scrolling down */
 }
-
-
-
 header figure {
-	background-color : #202020;
-	font-size        : 4rem;
-	color            : #fff;
+	background-color:#202020;
+	color:#fff;
+	font-size:40px;
+	font-size:4rem; /* 40px font-size for alt text */
 }
-
-
-
 nav {
-	min-width    : 770px;
-	padding      : 10px;
-
-	background   : url(images/bg-nav.png);
-	font-size    : 1.6rem;
-	border       : 2px solid #f593bb;
-	border-right : none;
-	border-left  : none;
+	background:url(images/bg-nav.png);
+	padding:10px; /* increase the depth of nav bar */
+	font-size:16px;
+	font-size:1.6rem; /* 16px */
+	border:2px solid #f593bb; /* makes changing both top and bottom borders easy i.e. one adjustment */
+	border-left:none;
+	border-right:none;
+	min-width:770px; /* prevent nav bar shrinking too much and breaking - visually */
 }
-
-
-
 nav ul li {
-	display : inline;
+	display:inline; /* places links in a horizontal bar instead of the traditional list format */
 }
-
-
-
+/*--   Main Content  --*/
 #content {
-	min-width  : 740px;
-	max-width  : 960px;
-	margin     : 0 auto;
-	padding    : 25px;
-
-	background : #666 url(images/bg-content.png);
+	background:#666 url(images/bg-content.png);
+	padding:25px; /* gives some space around the main content - needed due to bg image/color */
+	max-width:960px; /* prevents page becoming too wide */
+	min-width:740px; /* prevents page becoming too narrow and breaking */
+	margin:0 auto; /* ensures the main content is centrally placed */
 }
-
-
-
 hgroup {
-	margin-top : 170px;
+	margin-top:170px; /* drops the hgroup and all below from beneath the header */
 }
-
-
-
-h1,.gas,figcaption {
-	color : #f593bb;
+h1, .gas, figcaption {
+	color:#f593bb; /* color change - pink */
 }
-
-
-
 h1 {
-	margin-bottom : 25px;
-	font-size     : 2rem;
+	font-size:20px;
+	font-size:2rem; /* 20px */
+	margin-bottom:25px; /* apply some space beneath the h1 element */
 }
-
-
-
 h2 {
-	margin-bottom : 30px;
-	font-size     : 1.6rem;
+	font-size:16px;
+	font-size:1.6rem; /* 16px */
+	margin-bottom:30px; /* apply some space beneath the h2 element */
 }
-
-
-
 h2.lift {
-	margin-bottom : 10px;
+	margin-bottom:10px; /* applies a tweak to position of h2 elements with a class of lift */
 }
-
-
-
 h2.drop {
-	margin-top    : 15px;
-	margin-bottom : 10px;
+	margin-top:15px; /* positional tweak similar to h2.lift above */
+	margin-bottom:10px;
 }
-
-
-
+p {
+	font-size:10px;
+	font-size:1rem; /* 10px */
+}
 article figure {
-	float  : right;
-	margin : 5px 0 15px 15px;
+	float:right; /* push images to rhs of article */
+	margin:5px 0 15px 15px; /* give images some breathing room */
 }
-
-
-
 article p {
-	margin-bottom : 25px;
-	line-height   : 1.3rem;
+	margin-bottom:25px; /* give space between paragraphs */
+	line-height:1.3rem; /* make readability better - more space between sentences */
 }
-
-
-
+article p:last-child {
+	margin-bottom:0; /* remove extra space at end of main content */
+}
 article ul {
-	margin-bottom    : 25px;
-	margin-left      : 25px;
-
-	font-size        : 1rem;
-	line-height      : 1.8rem;
-	list-style-image : url(images/bullet.png);
+	list-style-image:url("images/bullet.png"); /* change the standard bullet to a small flower as per logo */
+	font-size:10px;
+	font-size:1rem; /* 10px */
+	line-height:1.8rem; /* adds space between the list items - readability thing */
+	margin-left:25px; /* pushes the bulleted list right - text-indent leaves bullets in original posn! */
+	margin-bottom:25px; /* applies space below as per p elements - uniformity */
 }
-
-
-
 article.alt-border section {
-	padding-bottom : 15px;
-	border         : none;
-	border-bottom  : 1px solid #333;
+	border:none;
+	border-bottom:1px solid #333; /* add a bottom border to sections within an article eg location page */
+	padding-bottom:15px;
 }
-
-
-
 section figure {
-	float  : right;
-	margin : 4px 0 15px 15px;
+	float:right; /* push pics of staff to rhs */
+	margin:4px 0 15px 15px; /* breathing room for odd pics */
 }
-
-
-
 section.even figure {
-	float  : left;
-	margin : 4px 15px 15px 0;
+	float:left; /* used to swap picture float side */
+	margin:4px 15px 15px 0; /* breathing room for even pics */
 }
-
-
-
 section {
-	clear      : both;
-	border-top : 1px solid #333;
+	clear:both; /* clears the float to tidy up the section */
+	border-top:1px solid #333; /* adds a small seperation line between staff */
 }
-
-
-
 section.drop {
-	padding-top : 15px;
+	padding-top:15px; /* creates a bit of space between border and section details */
 }
-
-
-
 section:first-child {
-	padding : none;
-	border  : none;
+	border:none; /* removes the border from above style */
+	padding:none; /* removes the padding from above style */
 }
-
-
-
 section:last-child {
-	margin-bottom : 7.2rem;
+	margin-bottom:7.2rem; /* makes the content bg meet the footer */
 }
-
-
-
 section figcaption {
-	font-size  : .8rem;
-	text-align : center;
+	text-align:center; /* centralises the figcaption */
+	font-size:8px;
+	font-size:.8rem; /* reduce size */
 }
-
-
-
 section#contact {
-	margin-bottom  : 10px;
-	padding-top    : 0;
-	padding-bottom : 20px;
-
-	border-bottom  : 1px solid #333;
+	border-bottom:1px solid #333; /* add a border to bottom of sections within the contact page */
+	padding-bottom:20px;
+	margin-bottom:10px;
+	padding-top:0px;
 }
-
-
-
 p#tel:before {
-	content      : url(images/phone.png);
-
-	position     : relative;
-	top          : 1rem;
-
-	margin-right : .7rem;
+	content:url(images/phone.png); /* add small icon before tel number */
+	position:relative;
+	top:1rem;
+	margin-right:.7rem;
 }
-
-
-
 p#e-address:before {
-	content     : url(images/email.png);
-
-	position    : relative;
-	top         : .8rem;
-
-	margin-left : 50px;
+	content:url(images/email.png); /* add small icon before email address */
+	position:relative;
+	top:0.8rem;
+	margin-left:50px;
 }
-
-
-
 p#address:before {
-	content      : url(images/address.png);
-
-	position     : relative;
-	top          : 1.1rem;
-
-	margin-right : .2rem;
+	content:url(images/address.png); /* add small icon before address */
+	position:relative;
+	top:1.1rem;
+	margin-right:.2rem;
 }
-
-
-
 section#contact p {
-	display     : inline-block;
-
-	margin      : 0;
-	padding     : 0;
-
-	line-height : 1rem;
+	display:inline-block; /* tidy up the layout of the contact details on contact page */
+	padding:0;
+	margin:0;
+	line-height:1rem;
 }
-
-
-
 iframe {
-	height : 500px;
-	width  : 740px;
-	margin : 1rem auto;
+	width:740px; /* set the dimensions of the Bing map frame */
+	height:500px;
+	margin:1rem auto;
 }
-
-
-
 section#bingMap {
-	margin-bottom : 0;
-	text-align    : center;
-	border-bottom : none;
+	text-align:center; /* tweak the layout of the Bing links */
+	margin-bottom:0;
+	border-bottom:none; /* remove the bottom border as last element on page */
 }
-
-
-
+/*-- Form styles --*/
 form {
-	width                 : 734px;
-	margin                : 0 auto;
-	padding               : 10px;
-
-	background            : rgba(255,255,255,.1);
-	border-color          : rgba(255,255,255,.6);
-	border-style          : solid;
-	border-width          : 2px;
-	border-radius         : 15px;
-
-	-moz-border-radius    : 15px;
-	-webkit-border-radius : 15px;
+	width:734px; /* fixed width for the form - prevent from breaking */
+	margin:0 auto;
+	background:#333;
+	background:rgba(255,255,255,.1);
+	border-color:#ffe8ea;
+	border-color:rgba(255,255,255,.6);
+	border-style:solid;
+	border-width:2px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px; /* add a radius to the border - looks good */
+	padding:10px;
 }
-
-
-
 fieldset {
-	width         : 733px;
-	margin-bottom : 15px;
+	margin-bottom:15px; /* adds space between the fieldsets */
+	width:733px;
 }
-
-
-
+fieldset:last-of-type {
+	margin-bottom:0; /* remove the margin applied above after last fieldset */
+}
 legend {
-	padding-bottom : 10px;
-
-	font-size      : 1.5rem;
-	color          : #ffeaea;
-	text-shadow    : 0 1px 1px #000;
+	color:#ffeaea; /* format the legend */
+	font-size:15px;
+	font-size:1.5rem;
+	padding-bottom:10px;
+	text-shadow:0 1px 1px black;
 }
-
-
-
 form p {
-	margin-bottom         : 5px;
-	padding               : 5px 10px;
-
-	background            : rgba(255,255,255,.3);
-	line-height           : 2rem;
-	border-color          : rgba(255,255,255,.6);
-	border-style          : solid;
-	border-width          : 2px;
-	border-radius         : 10px;
-
-	-moz-border-radius    : 10px;
-	-webkit-border-radius : 10px;
+	background:#333; /* formatting of the p elements in the form - all the input fields */
+	background:rgba(255,255,255,.3);
+	border-color:#ffe8ea;
+	border-color:rgba(255,255,255,.6);
+	border-style:solid;
+	border-width:2px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	line-height:2rem;
+	padding:5px 10px;
+	margin-bottom:5px;
 }
-
-
-
 textarea {
-	height : 4rem;
-	width  : 99%;
+	width:99%; /* sets the text area to look better */
+	height:40px;
+	height:4rem;
+	border-radius: 10px;
 }
-
-
-
 #personal p {
-	float        : left;
-	width        : 157px;
-	margin-right : 3px;
+	float:left; /* lets the personal details inputs sit side by side in the form */
+	width:157px; /* determined by the total form width to allow fields to sit together */
+	margin-right:3px; /* creates some space between the boxes */
 }
-
-
-
 #personal p:last-of-type {
-	margin-right : 0;
+	margin-right:0; /* removes the needless margin after the last personal details input field */
 }
-
-
-
-input[type=checkbox] {
-	margin-left : 35px;
+input[type="checkbox"] {
+	margin-left:35px; /* adds space between the checkboxes - looks better spaced apart */
 }
-
-
-
 label:hover {
-	cursor : pointer;
+	cursor:pointer; /* indicates to users that the label of the field is clickable */
 }
-
-
-
 label.no-hover:hover {
-	cursor : auto;
+	cursor:auto;
 }
-
-
-
 button {
-	width                 : 8rem;
-	margin                : 0 2rem;
-	padding               : .5rem 1.4rem;
-
-	background            : #f593bb;
-	font-size             : 1.4rem;
-	color                 : #202020;
-	letter-spacing        : .1rem;
-	text-shadow           : 0 1px 1px #ff4193;
-	border                : 2px solid #ff4193;
-	border-radius         : 20px;
-
-	-moz-border-radius    : 20px;
-	-webkit-border-radius : 20px;
-	-khtml-border-radius  : 20px;
+	background:#f593bb; /* formatting for the style of the buttons on the form */
+	border:2px solid #ff4193;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-khtml-border-radius:20px;
+	border-radius:20px;
+	color:#202020;
+	font-size:14px;
+	font-size:1.4rem;
+	letter-spacing:.1rem;
+	padding:.5rem 1.4rem;
+	text-shadow:0 1px 1px #ff4193;
+	width:8rem;
+	margin:0 2rem;
 }
-
-
-
 button:hover {
-	cursor      : pointer;
-	background  : #ff4193;
-	text-shadow : 0 1px 1px #f593bb;
-	border      : 2px solid #f593bb;
+	background:#ff4193; /* sets the colours to inverse when hovering over the button */
+	border:2px solid #f593bb;
+	text-shadow:0 1px 1px #f593bb;
+	cursor:pointer;
 }
-
-
-
 p#submit {
-	text-align : center;
+	text-align:center; /* center aligns the buttons */
 }
-
-
-
+/*--   Footer   --*/
 footer {
-	clear        : both;
-
-	width        : 100%;
-	padding      : 10px 0;
-
-	background   : #202020 url(images/bg-footer.png);
-	font-size    : 1rem;
-	text-align   : center;
-	border       : 2px solid #f593bb;
-	border-right : none;
-	border-left  : none;
+	padding:10px 0; /* gives footer breathing room above and below */
+	font-size:10px;
+	font-size:1rem; /* 10px */
+	text-align:center;
+	width:100%;
+	background:#202020 url(images/bg-footer.png);
+	border:2px solid #f593bb; /* as above in nav bar borders */
+	border-left:none;					/*  "  "     "  "   "    "     */
+	border-right:none;				/*  "  "     "  "   "    "     */
+	clear:both;
 }
-
-
-
 footer ul {
-	margin-bottom : 15px;
+	margin-bottom:15px; /* applies space between the nav list and the address element */
 }
-
-
-
 address a {
-	color : #ffe8ea;
+	color:#ffe8ea;
 }
-
-
-
 footer ul li {
-	display : inline;
-	padding : 0 10px;
+	padding:0 10px; /* applies space between the links/bullets */
+	display:inline; /* horiz layout as for nav bar */
 }
-
-
-
+/*--   Links   --*/
 a {
-	padding         : 10px 30px;
-	color           : #f593bb;
-	text-decoration : none;
+	color:#f593bb;
+	text-decoration:none; /* removes underline on links */
+	padding:10px 30px; /* adds space around link to increase effect of a:hover */
 }
-
-
-
 article p a {
-	padding     : 0;
-	font-weight : 700;
+	font-weight:bold; /* bold the links within the article */
+	padding:0; /* remove previously added padding to any links within the article */
 }
-
-
-
 a:visited {
-	color : #c9c;
+	color:#c9c; /* purple-ish color for visited links */
 }
-
-
-
 a:hover {
-	background-color : #f593bb;
-	color            : #555;
+	color:#555; /* change color of hovered link to light gray */
+	background-color:#f593bb; /* pink bg for hovered links */
 }
-
-
-
 a:active {
-	color : #000;
+	color:black; /* change color of active link to black */
 }
-
-
-
 a.current {
-	text-decoration : underline;
+	text-decoration:underline; /* applies underline on link with class of current */
 }
-
-
-
 section#contact a {
-	font-weight : 400;
+	font-weight:normal;
+}
+div#LME_maplinks a {
+	font-size:10px;
+	font-size:1rem;
 }
 
-
-
-p,div#LME_maplinks a {
-	font-size : 1rem;
-}
-
-
-
-article p:last-child,fieldset:last-of-type {
-	margin-bottom : 0;
-}
+/* in all the font-size declarations above I have declared it twice; once to set a pixel size and once to set a rem size.  Not all browsers support Root EMs yet and will therefore fallback to the pixel sizes declared before the rem size */
