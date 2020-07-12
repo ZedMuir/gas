@@ -1,73 +1,85 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> <!-- Fav Icon - seen in tab-->
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta http-equiv="content-language" content="en-gb" />
-		<meta name="description" content="The home page for Greydells Accounting Services, an accountancy firm based in Stevenage, Hertfordshire." />
-		<meta name="keywords" content="greydells, accounting, services, accountant, tax services, stevenage, hertfordshire, herts, bookkeeping, finacial, finance, tax return, paye, mortgage, investment, john jenkins, nicola sutton, hitchin, letchworth, graveley" />
-		<meta name="author" content="Steve Muir, Alpine Warrior Pigeon" />
-		<title>Greydells Accounting Services; Home</title>
-		<link rel="stylesheet" type="text/css" href="greydells3.css" />
-		<!--[if lt IE9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-	<div id="page">
-<!-- Header -->
-		<header>
-			<figure>
-				<img src="images/logo.png" alt="Greydells Accounting Services" />
-				<figcaption></figcaption>
-			</figure>
-			<nav>  <!-- Top Navigation Bar -->
-				<ul>
-					<li><a href="index.html" class="current">home</a></li>
-					<li><a href="services.html">services</a></li>
-					<li><a href="staff.html">staff</a></li>
-					<li><a href="contact.html">contact</a></li>
-					<li><a href="location.html">location</a></li>
-				</ul>
-			</nav>
-		</header>
-<!-- Main content -->
-		<div id="content">
-			<hgroup>
-				<h1> Welcome to Greydells Accounting Services </h1>
-				<h2>A Brief Introduction</h2>
-			</hgroup>
-			<article>
-				<figure>
-					<img src="images/pink_shirt.jpg" alt="Greydells Accounting Services - Introduction" />
-					<figcaption></figcaption>
-				</figure>
-				<p>Established in 1989 by John Jenkins, <span class="gas">greydells accounting services</span> is a small, personal and professional team of accountants.</p>
-				<p>The services available will include all your accounting needs, details of which can be found on the <a href="services.html">services</a> page.</p>
-				<p>If you wish to know more about the team at <span class="gas">greydells accounting services</span>, then check out the <a href="staff.html">staff</a> page for details of John and Nicola.</p>
-				<p>Should you have a query regarding the services we offer then you can submit your details and questions using our contact form on the <a href="contact.html">contact</a> page. This form will submit your question/enquiry via email.  If you would prefer, you can write, email or call using our details on the same page.</p>
-				<p>Need to find where we are?  On the <a href="location.html">location</a> page there are directions on how to find our office coming from the North and South of Stevenage.
- 				There is also an easy link to the location of <span class="gas">greydells accounting services</span> using Bing Maps.</p>
-			</article>
-		</div>
-<!-- Footer -->
-		<footer>  <!-- Bottom Navigation Bar -->
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><img src="images/bullet.png" alt="::" /></li>
-				<li><a href="services.html">Services</a></li>
-				<li><img src="images/bullet.png" alt="::" /></li>
-				<li><a href="staff.html">Staff</a></li>
-				<li><img src="images/bullet.png" alt="::" /></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><img src="images/bullet.png" alt="::" /></li>
-				<li><a href="location.html">Location</a></li>
-			</ul>
-			<address>
-				Copyright &copy;<a href="mailto:alpinewarriorpigeon@gmail.com?subject=Web%20Design">Alpine Warrior Pigeon</a>
-			</address>
-		</footer>
-	</div>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> <!-- Fav Icon - seen in tab-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="The home page for Greydells Accounting Services, an accountancy firm based in Stevenage, Hertfordshire." />
+    <meta name="keywords" content="greydells, accounting, services, accountant, tax services, stevenage, hertfordshire, herts, bookkeeping, finacial, finance, tax return, paye, mortgage, investment, john jenkins, nicola sutton, hitchin, letchworth, graveley" />
+    <meta name="author" content="Steve Muir, Alpine Warrior Pigeon" />
+    <title>Greydells Accounting Services; Home</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header>
+        <figure>
+          <img src="images/logo.png" alt="Greydells Accounting Services" />
+          <figcaption></figcaption>
+        </figure>
+      </header>
+      <nav class="menu">  <!-- Top Navigation Bar -->
+        <button aria-expanded="false" aria-controls="menu-list">
+          <span class="open">☰</span>
+          <span class="close">×</span>
+          Menu
+        </button>
+        <ul id="menu-list">
+          <li>
+            <a href="index.html" class="active">home</a>
+          </li>
+          <li>
+            <a href="services.html">services</a>
+          </li>
+          <li>
+            <a href="staff.html">staff</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+          <li>
+            <a href="location.html">location</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Main content -->
+      <section class="content">
+        <hgroup>
+          <h1> Welcome to Greydells Accounting Services </h1>
+          <h2>A Brief Introduction</h2>
+        </hgroup>
+        <div class="details">
+          <figure>
+            <img src="images/pink_shirt.jpg" alt="Greydells Accounting Services - Introduction" />
+            <figcaption></figcaption>
+          </figure>
+          <p>Established in 1989 by John Jenkins, <em>greydells accounting services</em> is a small, personal and professional team of accountants.</p>
+          <p>The services available will include all your accounting needs, details of which can be found on the <a href="services.html">services</a> page.</p>
+          <p>If you wish to know more about the team at <em>greydells accounting services</em>, then check out the <a href="staff.html">staff</a> page for details of John and Nicola.</p>
+          <p>Should you have a query regarding the services we offer then you can submit your details and questions using our contact form on the <a href="contact.html">contact</a> page. This form will submit your question/enquiry via email.  If you would prefer, you can write, email or call using our details on the same page.</p>
+          <p>Need to find where we are?  On the <a href="location.html">location</a> page there are directions on how to find our office coming from the North and South of Stevenage.
+          There is also an easy link to the location of <em>greydells accounting services</em> using Bing Maps.</p>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+        <address>
+          Copyright <sup>&copy;</sup> <a href="mailto:alpinewarriorpigeon@gmail.com?subject=Web%20Design">Alpine Warrior Pigeon</a>
+        </address>
+      </footer>
+    </div>
+    <script>
+      const navButton = document.querySelector('button[aria-expanded]');
+
+      function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+      }
+
+      navButton.addEventListener('click', toggleNav);
+    </script>
 	</body>
 </html>
