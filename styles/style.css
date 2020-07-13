@@ -106,7 +106,7 @@ header {
 .content {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
 }
 
 hgroup {
@@ -126,7 +126,48 @@ hgroup {
 
 .details p {
     max-width: 850px;
-    text-align: justify;
+    /* text-align: justify; */
+}
+
+.bio {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.bio-right p {
+  grid-column: 1 / span 2;
+  order: -1;
+}
+
+.bio-left p {
+  grid-column: span 2 / -1;
+  order: -1;
+}
+
+.bio-right figure {
+  display: grid;
+  width: 100%;
+  grid-column: span 1 / -1;
+  grid-row: 1 / span 2;
+  align-content: center;
+  justify-content: center;
+}
+
+.bio-left figure {
+  display: grid;
+  width: 100%;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  align-content: center;
+  justify-content: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 15px;
+  text-align: center;
 }
 
 /* Footer */
@@ -184,6 +225,28 @@ footer {
   h2 {
     font-size: 30px;
   }
+
+  .bio {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bio-right p {
+  grid-column: 1 / -1;
+}
+
+.bio-left p {
+  grid-column: 1 / -1;
+}
+
+.bio-right figure {
+  grid-column: span 1 / -2;
+}
+
+.bio-left figure {
+  grid-column: 2 / span 1;
+}
 }
 
 @media (max-width: 700px) {
@@ -200,6 +263,14 @@ footer {
     font-size: 30px;
     font-weight: 200;
   }
+
+  .bio-right figure {
+  grid-column: 1 / -1;
+}
+
+.bio-left figure {
+  grid-column: 1 / -1;
+}
 }
 
 @media (max-width: 500px) {
