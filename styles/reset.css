@@ -6,7 +6,7 @@
 html, body, div, span,
 h1, h2, h3, h4, h5, h6, p, pre,
 a, address, em, img, strong, var, ol, ul, li,
-fieldset, form,
+fieldset, form, iframe,
 article, figure, figcaption, footer, header, hgroup,
 menu, nav, section {
  margin: 0;

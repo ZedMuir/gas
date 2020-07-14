@@ -38,7 +38,8 @@ img {
 
 a {
   color: var(--pink);
-  text-decoration: underline wavy var(--pink);
+  text-decoration: underline dotted var(--pink);
+  -webkit-text-decoration: underline dotted var(--pink);
 }
 
 h1,
@@ -65,7 +66,6 @@ h1, em {
 
 .wrapper {
   display: grid;
-  /* gap: 20px; */
 }
 
 /* Header */
@@ -81,6 +81,8 @@ header {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  max-width: 80%;
+  margin: auto;
 }
 
 /* Menu links */
@@ -88,12 +90,29 @@ header {
 .menu a {
   text-align: center;
   display: block;
-  color: var(--pink);
   font-size: 20px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 20px;
+}
+
+/* Links */
+
+a:hover {
+  color: var(--black); /* change color of hovered link to light gray */
+  background-color: var(--pink); /* pink bg for hovered links */
+  /* box-shadow: 0 0 2px 5px var(--pink); */
+}
+
+.details a:hover, address a:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 2px 4px var(--pink);
+}
+
+a.active {
+  text-decoration: underline; /* applies underline on link with class of current */
+  -webkit-text-decoration: underline; /* Safari prefix */
 }
 
 /* Responsive menu controls */
@@ -115,6 +134,8 @@ hgroup {
   grid-column: 1 / -1;
   text-align: center;
   gap: 20px;
+  max-width: 90%;
+  margin: auto;
   margin-top: 20px;
 }
 
@@ -175,6 +196,26 @@ figcaption {
   text-align: center;
   margin-top: 10px;
   color: var(--pink);
+}
+
+/* Map and iframe */
+
+.map {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Footer */
@@ -325,17 +366,4 @@ address {
   footer hr {
   padding: 0 20px;
   }
-}
-
-/* Links */
-
-a:hover {
-  color: var(--black); /* change color of hovered link to light gray */
-	background-color: var(--pink); /* pink bg for hovered links */
-}
-a:active {
-	color:black; /* change color of active link to black */
-}
-a.active {
-	text-decoration:underline; /* applies underline on link with class of current */
 }
