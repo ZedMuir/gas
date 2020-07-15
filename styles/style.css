@@ -126,7 +126,7 @@ a.active {
 .content {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr 3fr 1fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
 }
 
 hgroup {
@@ -198,7 +198,15 @@ figcaption {
   color: var(--pink);
 }
 
-/* Map and iframe */
+/* Location page including Map and iframe */
+
+hgroup.how {
+  margin-top: -10px;
+}
+
+.seperator {
+  margin-top: 20px;
+}
 
 .map {
   position: relative;
@@ -216,6 +224,25 @@ figcaption {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Contact page specifics */
+
+.contact {
+  display: grid;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.address > * {
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  margin-bottom: 20px;
 }
 
 /* Footer */
@@ -268,8 +295,8 @@ address {
   }
 
   [aria-controls="menu-list"] {
-  display: block;
-  margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
   }
 
   .menu ul {
@@ -365,5 +392,15 @@ address {
   
   footer hr {
   padding: 0 20px;
+  }
+
+  .address > * {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 280px) {
+  .address > * {
+    max-width: 195px;
   }
 }
