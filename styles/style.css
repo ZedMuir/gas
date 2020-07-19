@@ -333,6 +333,7 @@ fieldset button {
   background: var(--black);
   color: var(--pink);
   border: 1px solid var(--pink);
+  font-size: 20px;
 }
 
 fieldset button:hover {
