@@ -57,6 +57,7 @@
             <p class="tel">Phone: <a href="tel:+441438210422">01438 210422</a></p>
             <p class="email">Email: <a href="mailto:john.greydells@gmail.com">john.greydells&#64;gmail.com</a></p>
           </section>
+          <hr class="seperator">
           <!-- End Contact Details -->
           <h2> Or Use The Form Below: </h2>
           <!-- Contact Form -->
@@ -87,7 +88,7 @@
               <fieldset>
                 <legend>Service Required</legend>
                 <p>
-                  <label class="no-hover" for="service">Select desired service</label>
+                  <label for="service">Service</label>
                   <select id="service" name="service">
                     <option>Select...</option>
                     <!-- basic group -->
@@ -114,30 +115,31 @@
               <!-- End Drop Down Select Set -->
               <!-- Comment Box -->
               <fieldset>
-                <legend>Enquiry</legend>
+                <legend>Enquiry Details</legend>
                 <p>
-                  <textarea name="enquiry" id="enquiry" placeholder="Enter your query here..."></textarea>
+                  <label for="enquiry">Query</label>
+                  <textarea name="enquiry" id="enquiry" placeholder="Enter your questions or comments here..."></textarea>
                 </p>
               </fieldset>
               <!-- End Comment Box -->
               <!-- Checkbox Set -->
               <fieldset>
-                <legend>Contact Methods</legend>
-                <p>
-                  <label class="no-hover">How would you like to be contacted?</label>
-                  <label><input type="checkbox" name="contact[]" id="method_0" value="tel" checked>Telephone</label>
-                  <label><input type="checkbox" name="contact[]" id="method_1" value="mob" checked>Mobile</label>
-                  <label><input type="checkbox" name="contact[]" id="method_2" value="email" checked>Email</label>
+                <legend>How can we contact you?</legend>
+                <p class="boxes">
+                  <label class="methods">Contact methods</label>
+                  <label>Tel <input type="checkbox" name="contact[]" id="method_0" value="tel" checked></label>
+                  <label>Mob <input type="checkbox" name="contact[]" id="method_1" value="mob" checked></label>
+                  <label>Email <input type="checkbox" name="contact[]" id="method_2" value="email" checked></label>
                 </p>
               </fieldset>
               <!-- End Checkbox Set -->
               <!-- Submit and Clear buttons -->
               <fieldset>
                 <legend>Submit via Email</legend>
-                <p id="submit">
-                  <button type="submit">Submit</button>
-                  <button type="reset">Clear</button>
-                </p>
+                  <p class="send">
+                    <button id="submit" type="submit">Submit</button>
+                    <button id="reset" type="reset">Clear</button>
+                  </p>
               </fieldset>
               <!-- End Submit/Clear buttons -->
             </form>
@@ -147,6 +149,7 @@
       </div>
       <!-- Footer -->
       <footer>
+        <hr>
         <address>
           Copyright <sup>&copy;</sup> <a href="mailto:alpinewarriorpigeon@gmail.com?subject=Web%20Design">Alpine Warrior
             Pigeon</a>

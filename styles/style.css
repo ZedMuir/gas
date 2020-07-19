@@ -5,7 +5,7 @@
   --pink: #f593bb;
   --darkPink: #ff4193;
   --black: #202020;
-  --grey: rgb(189, 185, 185)
+  --grey: rgb(189, 185, 185);
 }
 
 /* Some basic styling of common elements */
@@ -26,6 +26,7 @@ button {
   border: 0;
   padding: 10px 20px;
   border-radius: 30px;
+  min-width: 100px;
 }
 
 p {
@@ -245,6 +246,108 @@ hgroup.how {
   margin-bottom: 20px;
 }
 
+/* Form styling */
+
+#form {
+  display: grid;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+form {
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+legend {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  /* color: var(--pink); */
+}
+
+#personal p {
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+#personal label {
+  padding-left: 10px;
+}
+
+#personal input {
+  grid-column: 2 / -1;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+
+fieldset p {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+  padding: 5px 10px;
+  align-items: center;
+}
+
+input {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+#service {
+  grid-column: span 4 / -1;
+  font-size: 15px;
+  padding: 10px;
+}
+
+textarea {
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  grid-column: span 4 / -1;
+  height: 10vh;
+}
+
+.methods {
+  grid-column: 1 / span 2;
+}
+
+fieldset p.send {
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  gap: 20px;
+}
+
+fieldset button {
+  background: var(--black);
+  color: var(--pink);
+  border: 1px solid var(--pink);
+}
+
+fieldset button:hover {
+  background: var(--pink);
+  color: var(--black);
+}
+
+#submit {
+  grid-column: 2 / span 1;
+}
+
+#reset {
+  grid-column: span 1 / -2;
+}
+
 /* Footer */
 
 footer {
@@ -352,6 +455,18 @@ address {
 
   .bio-left figure {
   grid-column: 2 / span 1;
+  }
+
+  #personal label {
+  padding: 0;
+  }
+
+  #personal p {
+  grid-template-columns: 1fr 3fr;
+  }
+
+  .boxes > * {
+  grid-column: 1 / -1;
   }
 }
 
