@@ -341,9 +341,8 @@ fieldset button:hover {
   color: var(--black);
 }
 
-.g-recaptcha {
-  display: grid;
-  justify-items: center;
+form #website {
+  display: none;
 }
 
 #submit {
