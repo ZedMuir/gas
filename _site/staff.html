@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> <!-- Fav Icon - seen in tab-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="The website for Greydells Accounting Services, an accountancy firm based in Stevenage, Hertfordshire." />
+    <meta name="keywords" content="greydells, accounting, services, accountant, tax services, stevenage, hertfordshire, herts, bookkeeping, finacial, finance, tax return, paye, mortgage, investment, john jenkins, nicola sutton, hitchin, letchworth, graveley" />
+    <meta name="author" content="Steve Muir, Alpine Warrior Pigeon" />
+    <title>Greydells Accounting Services; Home</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header>
+        <figure>
+          <img src="images/logo.png" alt="Greydells Accounting Services" />
+          <figcaption></figcaption>
+        </figure>
+      </header>
+      <nav class="menu">  <!-- Top Navigation Bar -->
+        <button aria-expanded="false" aria-controls="menu-list">
+          <span class="open">☰</span>
+          <span class="close">×</span>
+          Menu
+        </button>
+        <ul id="menu-list">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="staff.html">staff</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Main content -->
+      <div class="content">
+        <hgroup>
+          <h1> Meet the Team </h1>
+          <h2> Who are Greydells Accounting Services?</h2>
+        </hgroup>
+        <div class="details">
+          <p><img src="images/John.jpg" alt="John Jenkins" /></p>
+<figcaption>John Jenkins</figcaption>
+
+<p>John Jenkins has been an accountant since 1965.  He completed his training with a local chartered accountancy firm and worked with other companies until the late ’80s. The time had come when he decided to start his own business and on the 1<sup>st</sup> May 1989 <em>greydells accounting services</em> was created. John has established a very varied client base and has seen <em>greydells accounting services</em> grow from a one man firm to an effective team which includes Nicola Sutton and has seen many earn their apprentiship in the company.</p>
+
+<p>In his spare time John enjoy’s travelling with his wife, mostly in their motorhome.  They like to cycle along the rivers and canals the world has on offer.</p>
+
+<hr />
+
+<p><img src="images/Nikki.jpg" alt="Nicola Sutton" /></p>
+<figcaption>Nicola Sutton</figcaption>
+
+<p>Nicola Sutton MAAT has a solid education and has trained and passed the Association of Accounting Technicians.  Since her time at <em>greydells accounting services</em> she has proven to be a great accountant excelling in payroll, VAT and CIS.</p>
+
+<p>Nicola lives with her partner and two children.  She takes a keen interest in supporting the children’s sporting ventures, including being the treasurer of the local rugby club.</p>
+
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <hr>
+        <address>
+          Copyright <sup>&copy;</sup> <a href="mailto:alpinewarriorpigeon@gmail.com?subject=Web%20Design">Alpine Warrior Pigeon</a>
+        </address>
+      </footer>
+    </div>
+    <!-- Collapsing nav menu function -->
+    <script>
+      const navButton = document.querySelector('button[aria-expanded]');
+
+      function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+      }
+
+      navButton.addEventListener('click', toggleNav);
+      </script>
+      <script>
+      var $buoop = { required: { e: -4, f: -3, o: -3, s: -1, c: -3 }, insecure: true, api: 2020.07 };
+      function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+      };
+      try { document.addEventListener("DOMContentLoaded", $buo_f, false) }
+      catch (e) { window.attachEvent("onload", $buo_f) }
+    </script>
+  </body>
+</html>

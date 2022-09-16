@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> <!-- Fav Icon - seen in tab-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="The website for Greydells Accounting Services, an accountancy firm based in Stevenage, Hertfordshire." />
+    <meta name="keywords" content="greydells, accounting, services, accountant, tax services, stevenage, hertfordshire, herts, bookkeeping, finacial, finance, tax return, paye, mortgage, investment, john jenkins, nicola sutton, hitchin, letchworth, graveley" />
+    <meta name="author" content="Steve Muir, Alpine Warrior Pigeon" />
+    <title>Greydells Accounting Services; Home</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header>
+        <figure>
+          <img src="images/logo.png" alt="Greydells Accounting Services" />
+          <figcaption></figcaption>
+        </figure>
+      </header>
+      <nav class="menu">  <!-- Top Navigation Bar -->
+        <button aria-expanded="false" aria-controls="menu-list">
+          <span class="open">☰</span>
+          <span class="close">×</span>
+          Menu
+        </button>
+        <ul id="menu-list">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="staff.html">staff</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Main content -->
+      <div class="content">
+        <hgroup>
+          <h1> Contact Details </h1>
+          <h2> Call, email or pop-in</h2>
+        </hgroup>
+        <div class="details">
+          <p>Phone: <a href="tel:+441438210422">01438 210422</a><br />
+Email: <a href="mailto:john.greydells@gmail.com">john.greydells@gmail.com</a><br />
+Address: <a href="http://maps.apple.com/?daddr=Greydells+Accounting+Services,129b+High+Street,Stevenage,Hertfordshire,SG13NL">129b High Street, Stevenage, Herts, SG1 3HS</a></p>
+
+<hr />
+<h2 id="location-map">Location Map</h2>
+
+<div class="map">
+    <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9845.459929494888!2d-0.2066339!3d51.9090518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e24c0bf8e0896f1!2sGreydells%20Accounting%20Services!5e0!3m2!1sen!2suk!4v1594745421583!5m2!1sen!2suk" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe>
+</div>
+
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <hr>
+        <address>
+          Copyright <sup>&copy;</sup> <a href="mailto:alpinewarriorpigeon@gmail.com?subject=Web%20Design">Alpine Warrior Pigeon</a>
+        </address>
+      </footer>
+    </div>
+    <!-- Collapsing nav menu function -->
+    <script>
+      const navButton = document.querySelector('button[aria-expanded]');
+
+      function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+      }
+
+      navButton.addEventListener('click', toggleNav);
+      </script>
+      <script>
+      var $buoop = { required: { e: -4, f: -3, o: -3, s: -1, c: -3 }, insecure: true, api: 2020.07 };
+      function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+      };
+      try { document.addEventListener("DOMContentLoaded", $buo_f, false) }
+      catch (e) { window.attachEvent("onload", $buo_f) }
+    </script>
+  </body>
+</html>
